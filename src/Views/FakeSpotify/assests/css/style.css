@@ -145,12 +145,12 @@ a{
 .navbar-user{
     margin-top:2rem;
     border-bottom-left-radius: 2rem;
-    border-top:1px solid #dbdbdb;
+    /* border-top:1px solid #dbdbdb; */
 }
 .navbar-user__container{
     display: flex;
     height:3.5rem;
-    margin:1rem;
+    margin:20rem 1rem 1rem 1rem;
     padding:3rem 1.5rem;
     justify-content: space-between;
     align-items: center;
