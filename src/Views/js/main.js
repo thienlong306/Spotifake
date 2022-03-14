@@ -59,6 +59,26 @@ const musics =[
         active:false,
 
     },
+    {
+        id: 5,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 6,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
 ];
 
 //set mặc định bài 1 phát đầu
@@ -230,6 +250,19 @@ function shuffleSong() {
 
     }
 }
+//==============================================
+//              CHỈNH ÂM LƯỢNG
+//==============================================
+$(".volume").click(function (e) {
+    e.preventDefault();
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    // $(".btnVolume").css({ display: "block" });
+    // $(".btnVolumeX").css({ display: "none" });
+    volumeX = clickX / width;
+    song.volume = clickX / width;
+});
+
 //==============================================
 //                  HIỆU ỨNG TIM
 //==============================================
