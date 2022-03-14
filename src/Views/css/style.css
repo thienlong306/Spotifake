@@ -3,11 +3,15 @@
             BUI NGOC'S PRODUCT
 ==============================================*/
 html{
+    height: 100%;
     font-size: 62.5%;
     font-family:  'Poppins';
     color: #676669;
     font-weight:400;
     scroll-behavior: smooth;
+}
+body{
+    height: 100%;
 }
 *{
     margin:0;
@@ -47,15 +51,16 @@ a{
     align-items: center;
     overflow: hidden;
     min-height:100vh;
+    height: 100%;
 }
 #container{
-    height: 69rem;
-    width: 110rem;
+    height: 100%;
+    width: 100%;
     /* margin:6% 0; */
     background-color: #e7e8f3;
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
     display: flex;
-    box-shadow: 0 0 .8rem black;
+    /* box-shadow: 0 0 .8rem black; */
     position: relative;
 }
 /*======================================
@@ -64,8 +69,8 @@ a{
 #navbar{
     background-color: #fff;
     width: calc(100% / 4);
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    /* border-top-left-radius: 2rem; */
+    /* border-bottom-left-radius: 2rem; */
     overflow:hidden;
 }
 .navbar-container{
@@ -144,7 +149,7 @@ a{
     margin:.8rem
 }
 .navbar-user{
-    /* margin-top:2rem; */
+    margin-top: 25rem;
     border-bottom-left-radius: 2rem;
     /* border-top:1px solid #dbdbdb; */
 }
@@ -384,9 +389,8 @@ a{
 .play-song{
     background-color: #fff;
     padding:0 1.5rem 1.5rem;
-    margin-top:3.5rem;
+    margin-top: 10.5rem;
     border-radius:.5rem;
-   
 }
 .play-control{
     display: flex;
@@ -536,6 +540,9 @@ a{
 }
 .sidebar__favorite-list img{
     height:100%;
+}
+.sidebar__suggest-album {
+    margin-top:2rem;
 }
 .artist-info__name{
     color:#000
