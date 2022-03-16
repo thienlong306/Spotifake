@@ -99,6 +99,266 @@ const musics =[
         active:false,
 
     },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
+    {
+        id: 8,
+        number: '05',
+        file: 'ttbdty.mp3',
+        title: 'Trên tình bạn dưới tình yêu',
+        artist: 'Min',
+        time: '3:19',
+        active:false,
+
+    },
 ];
 
 //set mặc định bài 1 phát đầu

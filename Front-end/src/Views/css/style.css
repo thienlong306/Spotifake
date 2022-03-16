@@ -67,6 +67,7 @@ a{
             SIDEBAR-LEFT
 ======================================*/
 #navbar{
+    height: 100%;
     background-color: #fff;
     width: calc(100% / 4);
     /* border-top-left-radius: 2rem; */
@@ -74,6 +75,7 @@ a{
     overflow:hidden;
 }
 .navbar-container{
+    height: 85%;
     padding:3rem;
     border-top-left-radius: 2rem;
 }
@@ -149,14 +151,15 @@ a{
     margin:.8rem
 }
 .navbar-user{
-    margin-top: 25rem;
+    height: 15%;
+    /* margin-top: 25rem; */
     border-bottom-left-radius: 2rem;
     /* border-top:1px solid #dbdbdb; */
 }
 .navbar-user__container{
     display: flex;
     height:3.5rem;
-    margin: 17rem 1rem 1rem 1rem;
+    /* margin: 17rem 1rem 1rem 1rem; */
     padding:3rem 1.5rem;
     justify-content: space-between;
     align-items: center;
@@ -193,10 +196,11 @@ a{
 #main-content{
     background-color: #e7e8f3;
     height:100%;
-    padding:1rem 3rem;
+    padding: 0rem 3rem;
     width: calc(100% / 4 * 2 + 2rem);
 }
 #main-content header{
+    height: 5%;
     margin-top:1.2rem;
     display:flex;
     align-items: center;
@@ -311,12 +315,13 @@ a{
     text-align: right;
 }
 .my-playlist{
-    height: 25rem;
-    max-height: 25rem;
+    height: 80%;
+    /* height: 25rem; */
+    /* max-height: 25rem; */
 }
 .playlist-list {
-    height: 200px;
-    overflow-x: hidden;
+    height: 90%;
+    overflow-x: auto;
 }
 .playlist-head{
     display: flex;
@@ -387,9 +392,10 @@ a{
             PLAY-SONGS
 ======================================*/
 .play-song{
+    height: 10%;
     background-color: #fff;
     padding:0 1.5rem 1.5rem;
-    margin-top: 10.5rem;
+    /* margin-top: 10.5rem; */
     border-radius:.5rem;
 }
 .play-control{
@@ -492,6 +498,7 @@ a{
     border-top-right-radius: 2rem;
 }
 .sidebar__shortcuts{
+    height: 23%;
     padding-top:3rem;
 }
 .sidebar__shortcuts-title{
@@ -519,12 +526,14 @@ a{
     height:1.1rem;
     margin-left:.4rem
 }
-
+.sidebar__favorite {
+    height: 23%;
+}
 .sidebar__favorite-list{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom:1.6rem;
+    /* padding-bottom:1.6rem; */
 }
 .sidebar__favorite-list .artist-info__avt{
     height:3rem;
@@ -535,14 +544,15 @@ a{
 .sidebar__favorite-title{
     font-size:1.4rem;
     color:#000;
-    padding:1.2rem 0;
+    /* padding:1.2rem 0; */
     font-weight: 600;
 }
 .sidebar__favorite-list img{
     height:100%;
 }
 .sidebar__suggest-album {
-    margin-top:2rem;
+    height: 54%;
+    /* margin-top:2rem; */
 }
 .artist-info__name{
     color:#000

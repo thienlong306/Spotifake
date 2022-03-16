@@ -104,8 +104,8 @@
                 <header>
                     <nav class="main-content__header-nav">
                         <i class="fas fa-bars bars-left"></i>
-                        <i class="fas fa-arrow-left"></i>
-                        <i class="fas fa-arrow-right"></i>
+                        <!-- <i class="fas fa-arrow-left"></i>
+                        <i class="fas fa-arrow-right"></i> -->
                     </nav>
                     <div class="main-content__search-form">
                         <i class="fas fa-search search-btn"></i>
@@ -113,31 +113,10 @@
                     </div>
                     <i class="fas fa-bars bars-right"></i>
                 </header>
-
-                <p class="main-content__des">What's hot<span><img src="./img/fire.png" alt="" width="16px"
-                            height="17px"></span></p>
-                <div class="main-content__trend">
-                    <div class="main-content__trend-title">Trending</div>
-                    <div class="main-content__trend-more btn-hover">
-                        More
-                        <span><i class="fas fa-chevron-right"></i></span>
-                    </div>
-                </div>
-                <div class="main-content__banner">
-                    <p class="main-content__banner-artist">Artist</p>
-                    <h4 class="main-content__banner-des">On Top Of The World</h4>
-                    <div class="main-content__banner-btn">
-                        <button class="play-btn">PLAY</button>
-                        <button class="follow-btn">FOLLOW</button>
-                    </div>
-                    <span class="main-content__view">Monthly listeners
-                        <p>50.000</p>
-                    </span>
-                </div>
                 <div class="my-playlist">
                     <div class="playlist-head">
-                        <h4>My Playlist</h4>
-                        <a class="btn-hover">Show all</a>
+                        <h4>Popular songs</h4>
+                        <!-- <a class="btn-hover">Show all</a> -->
                     </div>
                     <div class="playlist-list">
                         <div class="playlist playlist-list__title">
@@ -146,6 +125,7 @@
                             <p class="playlist__artist">ARTIST</p>
                             <p class="playlist__time">TIME</p>
                         </div>
+                        
                     </div>
                 </div>
 
@@ -185,25 +165,31 @@
         -->
             <div id="sidebar">
                 <div class="sidebar__shortcuts">
-                    <p class="sidebar__shortcuts-title">Shortcuts
+                    <p class="sidebar__shortcuts-title">Trending Artists
                         <i class="fas fa-stream js-hide-sidebar"></i>
                     </p>
-                    <div class="sidebar__shortcuts-items">
-                        <span class="sidebar__shortcuts-item">Chill
-                            <img src="./img/snow.png" alt="">
-                        </span>
-                        <span class="sidebar__shortcuts-item">Hot
-                            <img src="./img/star.png" alt="">
-                        </span>
-                        <span class="sidebar__shortcuts-item">Piano instrumental
-                            <img src="./img/piano.png" alt="">
-                        </span>
-                        <span class="sidebar__shortcuts-item">Jazz
-                            <img src="./img/jazz.png" alt="">
-                        </span>
-                        <span class="sidebar__shortcuts-item">Acoustic
-                            <img src="./img/ghitar.png" alt="">
-                        </span>
+                    <!--    ARTIST 1    -->
+                    <div class="sidebar__favorite-list">
+                        <div class="artist-info__avt">
+                            <img src="./img/tóc-tiên.jpg" alt="">
+                        </div>
+                        <div class="artist-info">
+                            <h4 class="artist-info__name">Tóc Tiên</h4>
+                            <p class="artist-info__song">6 songs in library</p>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+
+                    <!--    ARTIST 2    -->
+                    <div class="sidebar__favorite-list">
+                        <div class="artist-info__avt">
+                            <img src="./img/min.jpg" alt="">
+                        </div>
+                        <div class="artist-info">
+                            <h4 class="artist-info__name">Min</h4>
+                            <p class="artist-info__song">5 songs in library</p>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
                     </div>
                 </div>
 
