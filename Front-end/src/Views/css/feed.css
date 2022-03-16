@@ -1,0 +1,22 @@
+.list_discover {overflow-x: auto;height: 80%;}
+.item_discover {
+    margin: 15px 0;
+}
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+	bottom: -30px;
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}

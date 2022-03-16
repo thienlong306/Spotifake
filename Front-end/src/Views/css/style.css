@@ -320,10 +320,11 @@ a{
     /* max-height: 25rem; */
 }
 .playlist-list {
-    height: 90%;
+    height: 80%;
     overflow-x: auto;
 }
 .playlist-head{
+    height: 10%;
     display: flex;
     width:100%;
     justify-content: space-between;
@@ -347,6 +348,7 @@ a{
     padding: 0.5rem 0;
 }
 .playlist-list__title{
+    height: 5%;
     font-size:1rem;
 }
 .playlist__number{

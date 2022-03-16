@@ -382,12 +382,7 @@ for (var i = 0 ;i< musics.length; i++) {
 function resetSong(dir) {
     dir = Number (dir);
     playList.innerHTML =`
-    <div class="playlist playlist-list__title">
-        <p class="playlist__number">#</p>
-        <p class="playlist__title">TITLE</p>
-        <p class="playlist__artist">ARTIST</p>
-        <p class="playlist__time">TIME</p>
-    </div>`;
+    `;
     for (var j = 0 ;j< musics.length; j++) {
         playList.insertAdjacentHTML( 'beforeend',
        `<div class="playlist playlist--hover ${j === dir ? 'active' : ''}" data-index=${musics[j].id}>
@@ -533,14 +528,23 @@ function shuffleSong() {
 //==============================================
 //              CHỈNH ÂM LƯỢNG
 //==============================================
+
 $(".volume").click(function (e) {
     e.preventDefault();
     const width = this.clientWidth;
     const clickX = e.offsetX;
     // $(".btnVolume").css({ display: "block" });
     // $(".btnVolumeX").css({ display: "none" });
-    volumeX = clickX / width;
-    song.volume = clickX / width;
+    var volumeX = clickX / width;
+
+    if( volumeX < 0.1){
+        console.log(volumeX+"<0.1");
+        song.volume=0;
+    }else {
+        console.log(volumeX+">0.1");
+        song.volume=volumeX;
+    }
+   
 });
 
 //==============================================
@@ -596,9 +600,9 @@ barLeft.addEventListener('click', function() {
         sideBar.classList.remove('active');
     }
 })
-hideNavBar.addEventListener('click', function() {
-    navBar.classList.remove('active')
-})
+// hideNavBar.addEventListener('click', function() {
+//     navBar.classList.remove('active')
+// })
 barRight.addEventListener('click', function() {
     sideBar.classList.add('active');
     if (navBar.classList.contains('active')) {
