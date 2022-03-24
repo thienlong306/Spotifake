@@ -17,6 +17,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: left;
+    width: 75%;
   }
   
   .inner {

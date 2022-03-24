@@ -1,0 +1,72 @@
+/*=============================================
+        DESIGNED IDEA: DRIBBLE
+            BUI NGOC'S PRODUCT
+==============================================*/
+html{
+    height: 100%;
+    font-size: 62.5%;
+    font-family:  'Poppins';
+    color: #676669;
+    font-weight:400;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100%;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*=============================================
+                   THANH SCROLL
+==============================================*/
+html::-webkit-scrollbar{
+    width:.8rem;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #000;
+    border-radius: 1rem;
+}
+a{
+    text-decoration: none !important;
+    display: block;
+    color: var(--text-color);
+    background-color: transparent;
+    cursor: pointer;
+}
+:root{
+    --primary-color: #ffc876;
+    --text-color: #676669;
+    --second-color: #092c3e;
+    --third-color: #121212;
+}
+/*=========================================
+                    CODE
+==========================================*/
+#main{
+    background-color: #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height:100vh;
+    height: 100%;
+}
+#container{
+    height: 100%;
+    width: 100%;
+    /* margin:6% 0; */
+    background-color: #e7e8f3;
+    /* border-radius: 2rem; */
+    display: flex;
+    /* box-shadow: 0 0 .8rem black; */
+    position: relative;
+}
+.App {
+    height: 100%;
+}
+
+div#root {
+    height: 100%;
+}   
