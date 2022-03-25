@@ -1,4 +1,4 @@
-[
+const listsong =[
     {
         "id":1,
         "name":"NoCopyrightSounds.Au5 - Closer (feat. Danyka Nadeau) [NCS Release]",
@@ -39,4 +39,19 @@
         "view":"15",
         "liked":"7"
     }
-]
+];
+const songURL =null;
+const playRecuder=(state=songURL,action)=>{
+    switch(action.type){
+        case "PLAY-SONG":
+            state = require("../data/"+listsong[action.idSong-1].name+".mp3");
+            // const audio = new Audio(song);
+            // console.log(audio);
+            // audio.play();
+            return state;
+            break;
+        default:
+            return state;
+    }
+};
+export default playRecuder;

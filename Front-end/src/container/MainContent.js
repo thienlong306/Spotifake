@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
 import '../styles/MainContent.css'
+import '../styles/App.css'
+import { connect } from 'react-redux';
+import Player from '../components/Player/Player';
 class MainContent extends Component {
+    playSong=(idSong)=>{
+        this.props.playSong(idSong);
+        const audio=document.querySelector("audio");
+        audio.play();  
+    }
+    mapSong=()=>
+        this.props.song.map((value,key)=>{
+            const tmp = value.name.split(".");
+            return (        
+                <div className="playlist playlist--hover" key={key} onClick={(idSong)=>this.playSong(value.id)}>
+                    <p className=" playlist__number">{value.id}</p>
+                    <p className=" playlist__title">{tmp[1]}</p>
+                    <p className=" playlist__artist">{tmp[0]}</p>
+                    <p className=" playlist__time">0</p>
+                </div>  )
+
+        });
+    
     render() {
+        
         return (
             <div id="main-content">
             <header>
@@ -28,42 +50,28 @@ class MainContent extends Component {
                     <p className="playlist__time">TIME</p>
                 </div>
                 <div className="playlist-list">
-                   
+                    {this.mapSong()}
                 </div>
             </div>
-
-            <div className="play-song">
-                <div className="play-control">
-                    <div className="play-control__act">
-                        <i className="far fa-heart" id='heart'></i>
-                        <i className="fas fa-music"></i>
-                        <i className="fas fa-expand-alt"></i>
-                    </div>
-                    <div className="play-control__main">
-                        <i className="fas fa-redo-alt play-repeat"></i>
-                        <i className="fas fa-fast-backward play-backward main-icon"></i>
-                        {/* <i className="fas fa-pause-circle pause-icon main-icon main-icon--big"></i> */}
-                        <span className="play-inner">
-                            <i className="fas fa-play-circle play-icon main-icon main-icon--big"></i>
-                        </span>
-                        <i className="fas fa-fast-forward play-forward main-icon"></i>
-                        <i className="fas fa-random shuffle-song"></i>
-                    </div>
-                    <div className="play-control__volume">
-                        <i className="fas fa-volume-down"></i>
-                        <input type="range" id="volume" className="volume"/>
-                    </div>
-                </div>
-                <div className="play-seekbar">
-                    <div className="timer__left">0:00</div>
-                    <input type="range" name="range" id="range" className="range" />
-                    <audio src="./mp3/ntt.mp3" id="song"></audio>
-                    <div className="timer__right">3.00</div>
-                </div>
-            </div>
+            <Player></Player>
         </div>
         );
     }
 }
-
-export default MainContent;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        song: state.song,
+        songURL:state.play
+    }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        playSong: (idSong) => {
+            dispatch({
+                type:"PLAY-SONG",
+                idSong
+            })
+        }
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(MainContent);

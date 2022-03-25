@@ -129,7 +129,7 @@
 }
 .playlist-list {
     height: 80%;
-    overflow-x: auto;
+    overflow: hidden;
 }
 .playlist-head{
     height: 10%;
