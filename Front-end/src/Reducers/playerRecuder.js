@@ -49,10 +49,7 @@ const player={
 const playerRecuder=(state=player,action)=>{
     switch(action.type){
         case "SELECT-PLAY-SONG":
-            // state.songURL =require("../data/"+listsong[action.idSong-1].name+".mp3");
-            // state[0].imageSongURL =require("../data/"+listsong[action.idSong-1].name+".webp");
-            // state[0].isPlaying=true;
-            return {...state,songURL:require("../data/"+listsong[action.idSong-1].name+".mp3"),imageSongURL:require("../data/"+listsong[action.idSong-1].name+".webp"),nameSong:listsong[action.idSong-1].name};
+            return {...state,songURL:require("../Data/"+listsong[action.idSong-1].name+".mp3"),imageSongURL:require("../Data/"+listsong[action.idSong-1].name+".webp"),nameSong:listsong[action.idSong-1].name};
         default:
             return state;
     }

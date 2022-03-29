@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import Player from '../components/Player/Player';
+import InfoSong from '../components/InfoSong/InfoSong';
 function App() {
   return (
     <div className="App">
@@ -35,6 +37,7 @@ function App() {
               </Route>
             </Switch>
           </Router>
+          <Player></Player>
       </div>
     </div>
   </div>

@@ -55,7 +55,6 @@ class Home extends Component {
                     {this.mapSong()}
                 </div>
             </div>
-            <Player></Player>
         </div>
         );
     }

@@ -31,7 +31,6 @@ class Discover extends Component {
           <ListChart></ListChart>
         </div>
       </div>
-      <Player></Player>
     </div>
     );
   }
