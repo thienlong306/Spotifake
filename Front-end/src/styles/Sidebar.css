@@ -63,7 +63,12 @@
 }
 .sidebar__suggest-album {
     height: 54%;
+    position: relative;
     /* margin-top:2rem; */
+}
+.suggest-album {
+    position: absolute;
+    bottom: 5%;
 }
 .artist-info__name{
     color:#000

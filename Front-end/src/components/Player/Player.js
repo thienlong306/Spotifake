@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-class Player extends Component {
-    
+import { useEffect } from 'react';
+class Player extends Component {    
     render() {
         return (
             <div className="play-song">
@@ -29,7 +29,7 @@ class Player extends Component {
                 <div className="play-seekbar">
                     <div className="timer__left">0:00</div>
                     <input type="range" name="range" id="range" className="range" />
-                    <audio autoPlay crossOrigin="anonymous" src={this.props.songURL} id="song"></audio>
+                    <audio autoPlay crossOrigin="anonymous" src={this.props.player.songURL} id="audio"></audio>
                     <div className="timer__right">3.00</div>
                 </div>
             </div>
@@ -38,7 +38,7 @@ class Player extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        songURL: state.play
+        player: state.player
     }
 }
 export default connect(mapStateToProps,)(Player)

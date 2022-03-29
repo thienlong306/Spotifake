@@ -1,9 +1,9 @@
 import songRecuder from './Reducers/songRecuder';
-import playRecuder from './Reducers/playRecuder';
+import playerRecuder from './Reducers/playerRecuder';
 var redux = require("redux");
 const allRecuder=redux.combineReducers({
     song:songRecuder,
-    play:playRecuder,
+    player:playerRecuder,
 })
 var store =redux.createStore(allRecuder);
 export default store;

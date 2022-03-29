@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import '../styles/App.css'
-import MainContent from './MainContent';
+import Home from './Home';
 import Discover from './Discover'
 import Sidebar from './Sidebar';
 import {
@@ -20,7 +20,7 @@ function App() {
             <Navbar></Navbar>
             <Switch>
               <Route exact path="/">
-                <MainContent></MainContent>
+                <Home></Home>
                 <Sidebar></Sidebar>
               </Route>
               <Route path="/discover">

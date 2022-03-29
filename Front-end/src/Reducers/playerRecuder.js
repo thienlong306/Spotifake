@@ -40,18 +40,21 @@ const listsong =[
         "liked":"7"
     }
 ];
-const songURL =null;
-const playRecuder=(state=songURL,action)=>{
+const player={
+    songURL:null,
+    imageSongURL:null,
+    nameSong:null,
+    isPlaying:false
+};
+const playerRecuder=(state=player,action)=>{
     switch(action.type){
-        case "PLAY-SONG":
-            state = require("../data/"+listsong[action.idSong-1].name+".mp3");
-            // const audio = new Audio(song);
-            // console.log(audio);
-            // audio.play();
-            return state;
-            break;
+        case "SELECT-PLAY-SONG":
+            // state.songURL =require("../data/"+listsong[action.idSong-1].name+".mp3");
+            // state[0].imageSongURL =require("../data/"+listsong[action.idSong-1].name+".webp");
+            // state[0].isPlaying=true;
+            return {...state,songURL:require("../data/"+listsong[action.idSong-1].name+".mp3"),imageSongURL:require("../data/"+listsong[action.idSong-1].name+".webp"),nameSong:listsong[action.idSong-1].name};
         default:
             return state;
     }
 };
-export default playRecuder;
+export default playerRecuder;

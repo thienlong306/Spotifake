@@ -1,5 +1,8 @@
 import React, { Component } from "react";
+import InfoSong from "../components/InfoSong/InfoSong";
+import { connect } from "react-redux";
 import '../styles/Sidebar.css'
+import Player from "../components/Player/Player";
 class Sidebar extends Component {
   render() {
     return (
@@ -60,24 +63,10 @@ class Sidebar extends Component {
             <i className="fas fa-ellipsis-h"></i>
           </div>
         </div>
-
-        <div className="sidebar__suggest-album">
-          <div className="suggest-album">
-            <div className="suggest-album__img-container">
-              <img src="./img/ngô-lan-hương.jpg" alt="" />
-            </div>
-            <div className="suggest-album__content">
-              <div className="suggest-album__info">
-                <h4>Anh muốn đưa em về không</h4>
-                <p>Ngô Lan Hương</p>
-              </div>
-              <i className="far fa-plus-square"></i>
-            </div>
-          </div>
-        </div>
+        <InfoSong></InfoSong>
       </div>
     );
   }
 }
-
+  
 export default Sidebar;
