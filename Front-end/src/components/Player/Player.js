@@ -1,8 +1,37 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { useEffect } from "react";
 import InfoSong from "../InfoSong/InfoSong";
+import $ from "jquery";
 class Player extends Component {
+  componentDidMount() {
+    $("audio")[0].onloadedmetadata=function(){
+      let min_d = isNaN(this.duration) === true ? "0" : Math.floor(this.duration / 60);
+      min_d = min_d < 10 ? "0" + min_d : min_d;
+      let sec_d;
+      if (Math.floor(this.duration) >= 60) {
+        for (var i = 1; i <= 60; i++) {
+          if (Math.floor(this.duration) >= 60 * i && Math.floor(this.duration) < 60 * (i + 1)) {
+            sec_d = Math.floor(this.duration) - 60 * i;
+            sec_d = sec_d < 10 ? "0" + sec_d : sec_d;
+          }
+        }
+      } else {
+        sec_d = isNaN(this.duration) === true ? "0" : Math.floor(this.duration);
+        sec_d = sec_d < 10 ? "0" + sec_d : sec_d;
+      }
+      $(".timer__right").html(min_d+":"+sec_d);
+    };
+  }
+  
+  setIsPlaying = () => {
+    if (this.props.player.isPlaying) {
+      $("audio")[0].pause();
+      this.props.setIsPlaying();
+    } else {
+      $("audio")[0].play();
+      this.props.setIsPlaying();
+    }
+  };
   render() {
     return (
       <div className="player-song">
@@ -18,7 +47,14 @@ class Player extends Component {
               <i className="fas fa-fast-backward play-backward main-icon"></i>
               {/* <i className="fas fa-pause-circle pause-icon main-icon main-icon--big"></i> */}
               <span className="play-inner">
-                <i className="fas fa-play-circle play-icon main-icon main-icon--big"></i>
+                <i
+                  className={`fas fa-${
+                    this.props.player.isPlaying ? "pause" : "play"
+                  }-circle main-icon main-icon--big`}
+                  onClick={() => {
+                    this.setIsPlaying();
+                  }}
+                ></i>
               </span>
               <i className="fas fa-fast-forward play-forward main-icon"></i>
               <i className="fas fa-random shuffle-song"></i>
@@ -37,8 +73,9 @@ class Player extends Component {
               src={this.props.player.songURL}
               id="audio"
             ></audio>
-            <div className="timer__right">3.00</div>
+            <div className="timer__right">0:00</div>
           </div>
+          <InfoSong></InfoSong>
         </div>
       </div>
     );
@@ -49,4 +86,13 @@ const mapStateToProps = (state, ownProps) => {
     player: state.player,
   };
 };
-export default connect(mapStateToProps)(Player);
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    setIsPlaying: () => {
+      dispatch({
+        type: "SET-ISPLAYING",
+      });
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Player);

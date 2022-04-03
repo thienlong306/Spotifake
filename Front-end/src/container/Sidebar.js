@@ -63,7 +63,6 @@ class Sidebar extends Component {
             <i className="fas fa-ellipsis-h"></i>
           </div>
         </div>
-        <InfoSong></InfoSong>
       </div>
     );
   }
