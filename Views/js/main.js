@@ -533,8 +533,6 @@ $(".volume").click(function (e) {
     e.preventDefault();
     const width = this.clientWidth;
     const clickX = e.offsetX;
-    // $(".btnVolume").css({ display: "block" });
-    // $(".btnVolumeX").css({ display: "none" });
     var volumeX = clickX / width;
 
     if( volumeX < 0.1){

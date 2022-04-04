@@ -12,7 +12,6 @@ class Sidebar extends Component {
             Trending Artists
             <i className="fas fa-stream js-hide-sidebar"></i>
           </p>
-          {/*    ARTIST 1    */}
           <div className="sidebar__favorite-list">
             <div className="artist-info__avt">
               <img src="./img/tóc-tiên.jpg" alt="" />
