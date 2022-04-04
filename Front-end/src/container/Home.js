@@ -13,13 +13,13 @@ class Home extends Component {
     }
     mapSong=()=>
         this.props.song.map((value,key)=>{
-            const tmp = value.name.split(".");
+            const list_music = value.name.split(".");
             return (        
                 <div className="playlist playlist--hover" key={key} onClick={(idSong)=>this.selectPlaySong(value.id)}>
                     <p className=" playlist__number">{value.id}</p>
-                    <p className=" playlist__title">{tmp[1]}</p>
-                    <p className=" playlist__artist">{tmp[0]}</p>
-                    <p className=" playlist__time">0</p>
+                    <p className=" playlist__title">{list_music[1]}</p>
+                    <p className=" playlist__artist">{list_music[0]}</p>
+                    <p className=" playlist__time">{list_music[2]}</p>
                 </div>  )
 
         });
@@ -27,7 +27,7 @@ class Home extends Component {
     render() {
         
         return (
-            <div id="main-content">
+            <div id="main-content" >
             <header>
                 <nav className="main-content__header-nav">
                     <i className="fas fa-bars bars-left"></i>

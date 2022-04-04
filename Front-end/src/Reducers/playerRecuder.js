@@ -38,6 +38,86 @@ const listsong =[
         "year":"2000",
         "view":"15",
         "liked":"7"
+    },
+    {
+        "id":6,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
+    },
+    {
+        "id":7,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
+    },
+    {
+        "id":8,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
+    },
+    {
+        "id":9,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
+    },
+    {
+        "id":10,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
+    },
+    {
+        "id":11,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
+    },
+    {
+        "id":12,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
+    },
+    {
+        "id":13,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
+    },
+    {
+        "id":14,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
+    },
+    {
+        "id":15,
+        "name":"NoCopyrightSounds.Fareoh - Under Water [NCS Release]",
+        "description":"Text",
+        "year":"2000",
+        "view":"15",
+        "liked":"7"
     }
 ];
 const player={
