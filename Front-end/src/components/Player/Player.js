@@ -62,9 +62,9 @@ class Player extends Component {
   }
   selectPlaySong=(idSong)=>{
     if(this.props.player.isShuffle) {
-      this.props.selectPlaySong(Math.floor(Math.random() * this.props.song.length+1));
+      this.props.selectPlaySong(Math.floor(Math.random() * this.props.song.length),this.props.song[0].id);
     }else{
-      this.props.selectPlaySong(idSong);
+      this.props.selectPlaySong(idSong,this.props.song[0].id,this.props.song[0].id);
     }
   }
   render() {
@@ -79,7 +79,7 @@ class Player extends Component {
             </div>
             <div className="play-control__main">
               <i className="fas fa-redo-alt play-repeat active" onClick={()=>{this.isLoop()}}></i>
-              <i className="fas fa-fast-backward play-backward main-icon" onClick={()=>{this.selectPlaySong(this.props.player.indexSongPlaying-1)}}></i>
+              <i className="fas fa-fast-backward play-backward main-icon" onClick={()=>{this.selectPlaySong(this.props.player.indexSongPlaying-1,this.props.song[0].id)}}></i>
               {/* <i className="fas fa-pause-circle pause-icon main-icon main-icon--big"></i> */}
               <span className="play-inner">
                 <i
@@ -91,7 +91,7 @@ class Player extends Component {
                   }}
                 ></i>
               </span>
-              <i className="fas fa-fast-forward play-forward main-icon" onClick={()=>{this.selectPlaySong(this.props.player.indexSongPlaying+1)}}></i>
+              <i className="fas fa-fast-forward play-forward main-icon" onClick={()=>{this.selectPlaySong(this.props.player.indexSongPlaying+1,this.props.song[0].id)}}></i>
               <i className="fas fa-random shuffle-song" onClick={()=>{this.isShuffle()}}></i>
             </div>
             <div className="play-control__volume">
@@ -140,10 +140,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         type: "SET-ISSHUFFLE",
       });
     },
-    selectPlaySong:(idSong)=>{
+    selectPlaySong:(idSong,idFirstSong)=>{
       dispatch({
         type: "SELECT-PLAY-SONG",
-        idSong
+        idSong,
+        idFirstSong,
       });
     },
   };

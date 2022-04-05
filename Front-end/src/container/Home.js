@@ -7,7 +7,7 @@ import $ from "jquery";
 import ShowList from "../components/ShowList/ShowList";
 class Home extends Component {
   selectPlaySong = (idSong) => {
-    this.props.selectPlaySong(idSong);
+    this.props.selectPlaySong(idSong,this.props.song[0].id);
   };
   mapSong = () =>
     this.props.song.map((value, key) => {
@@ -19,9 +19,9 @@ class Home extends Component {
           onClick={(idSong) => this.selectPlaySong(value.id)
           }
         >
-          <p className=" playlist__number">{value.id}</p>
-          <p className=" playlist__title">{tmp[1]}</p>
-          <p className=" playlist__artist">{tmp[0]}</p>
+          <p className=" playlist__number">{key}</p>
+          <p className=" playlist__title">{value.artist}</p>
+          <p className=" playlist__artist">{value.name}</p>
           <p className=" playlist__time">0</p>
         </div>
       );
@@ -29,7 +29,7 @@ class Home extends Component {
 
   render() {
     return (
-        <ShowList title="Popular Song" list={this.mapSong()}></ShowList>
+        <ShowList list={this.mapSong()}></ShowList>
     );
   }
 }
@@ -41,10 +41,11 @@ const mapStateToProps = (state, ownProps) => {
 };
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    selectPlaySong: (idSong) => {
+    selectPlaySong: (idSong,idFirstSong) => {
       dispatch({
         type: "SELECT-PLAY-SONG",
         idSong,
+        idFirstSong,
       });
     },
   };

@@ -199,6 +199,7 @@
     font-size: 1.2rem;
     padding: 1rem 0;
     margin-left: 1rem;
+    height: 12%;
 }
 
 .playlist-list__title {
@@ -368,4 +369,12 @@
 .shuffle-song,
 #heart {
     transition: .5s;
+}
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-color: #404040;
+    right: 1.125em;
+    z-index: 4;
+}
+.input, .select select, .textarea {
+    border-radius: 2.5rem;
 }
