@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 class ShowList extends Component {
   componentDidMount(){
-    this.props.changeListTrending("POP"); 
+    if(this.props.song.playlist==null){
+      this.props.changeListTrending("POP"); 
+    }else
+      this.props.changeListTrending(this.props.song.playlist); 
+    
   }
   isChange=(event)=>{
     this.props.changeListTrending(event.target.value);
@@ -30,7 +34,7 @@ class ShowList extends Component {
           <div className="playlist-head">
             <h4>
               <div className="select is-medium" onChange={(event)=>{this.isChange(event)}}>
-                <select>
+                <select defaultValue={this.props.song.playlist}>
                   <option value={"POP"}>Popular Song</option>
                   <option value={"K-POP"}>Popular Korean songs</option>
                   <option value={"V-POP"}>Popular Vietnamese songs</option>
@@ -51,6 +55,11 @@ class ShowList extends Component {
     );
   }
 }
+const mapStateToProps = (state, ownProps) => {
+  return {
+    song: state.song,
+  }
+}
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     changeListTrending: (playlist) => {
@@ -61,4 +70,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
   };
 }
-export default connect(null,mapDispatchToProps)(ShowList)
+export default connect(mapStateToProps,mapDispatchToProps)(ShowList)

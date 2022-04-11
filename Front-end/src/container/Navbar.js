@@ -36,17 +36,17 @@ class Navbar extends Component {
                 </div>
             </div>
 
-            <div className="navbar-user">
-                <div className="navbar-user__container row">
-                    <div className="col-6 d-flex justify-content-center">
-                        <Link to="/signup"><button type="button" className="btn btn-light">Sign Up</button></Link>
-                        <a href="./content/signup.html"></a>
-                    </div>
-                    <div className="col-6 d-flex justify-content-center">
-                        <Link to="/signin"><button type="button" className="btn btn-dark">Sign In</button></Link>
-                    </div>
-                </div>
-            </div>
+                    {/* <div className="navbar-user">
+                        <div className="navbar-user__container row">
+                            <div className="col-6 d-flex justify-content-center">
+                                <Link to="/signup"><button type="button" className="btn btn-light">Sign Up</button></Link>
+                                <a href="./content/signup.html"></a>
+                            </div>
+                            <div className="col-6 d-flex justify-content-center">
+                                <Link to="/signin"><button type="button" className="btn btn-dark">Sign In</button></Link>
+                            </div>
+                        </div>
+                    </div> */}
         </div>
         );
     }

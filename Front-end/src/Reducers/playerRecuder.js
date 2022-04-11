@@ -11,7 +11,6 @@ const player = {
 const playerRecuder = (state = player, action) => {
   switch (action.type) {
     case "SELECT-PLAY-SONG":
-      console.log(action.idFirstSong+action.idSong);
     return {...state,songURL:require("../data/"+listsong[action.idFirstSong+action.idSong].url+".mp3"),
                      imageSongURL:require("../data/"+listsong[action.idFirstSong+action.idSong].url+".webp"),
                      nameSong:listsong[action.idFirstSong+action.idSong].url,
