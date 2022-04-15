@@ -46,6 +46,9 @@
     
 }
 @media (max-width:800px) {
+    .imgSearch{
+        display: none;
+    }
     #container{
         width:70rem;
     }
