@@ -19,7 +19,6 @@ class Home extends Component {
         onClick={(idSong) => this.selectPlaySong(key)
         }
       >
-        <p className=" playlist__number">{key}</p>
         <p className=" playlist__title">{value.artist}</p>
         <p className=" playlist__artist">{value.name}</p>
         <p className=" playlist__time">0</p>

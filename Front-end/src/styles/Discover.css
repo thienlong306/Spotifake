@@ -1,22 +1,70 @@
-.list_discover {overflow-x: auto;height: 80%;}
+.list_discover {
+  overflow-x: auto;
+  height: 88%;
+}
 .item_discover {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 .blog .carousel-indicators {
-	left: 0;
-	top: auto;
-	bottom: -30px;
+  left: 0;
+  top: auto;
+  bottom: -30px;
 }
 
 /* The colour of the indicators */
 .blog .carousel-indicators li {
-    background: #a3a3a3;
-    border-radius: 50%;
-    width: 8px;
-    height: 8px;
-    cursor: pointer;
+  background: #a3a3a3;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
 }
 
 .blog .carousel-indicators .active {
-background: #707070;
+  background: #707070;
 }
+.list_discover::-webkit-scrollbar {
+  width: 1px;
+}
+
+.list_discover::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.list_discover::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+h1.titleChart {
+  font-size: 20px;
+  font-weight: 600;
+}
+span.titleImg {
+  font-size: 11px;
+  font-weight: 500;
+}
+img.imgDiscover {
+  border-radius: 10%;
+}
+.boxImg {
+  opacity: 1;
+  position: relative;
+}
+.boxImg::after {
+  position: absolute;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO8mLb_vmk7lcAL6uzf5im2hX0NMdtQQBK3w&usqp=CAU");
+  background-size:  contain;
+  border-radius: 10%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.boxImg:hover::after {
+    opacity: 0.6;
+    transition: .4s;
+  }

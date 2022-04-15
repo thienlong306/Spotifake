@@ -5,18 +5,18 @@ class ListChart extends Component {
     return (
       <div className="item_discover">
         <div className="dicover_title">
-          <h2>Charts: Top 50</h2>
-          <span>The most played tracks on SoundCloud this week</span>
+          <h1 className="titleChart">{this.props.title}</h1>
+          <span className="descriptionChart">{this.props.description}</span>
         </div>
-        <div className="container">
+        <div className="container pl-0 pt-2">
           <div className="row blog">
-            <div className="col-md-12">
+            <div className="col-md-12 ">
               <div
                 id="blogCarousel"
                 className="carousel slide"
                 data-ride="carousel"
               >
-                <ol className="carousel-indicators">
+                {/* <ol className="carousel-indicators">
                   <li
                     className="prevSlide"
                     data-target="#blogCarousel"
@@ -27,100 +27,55 @@ class ListChart extends Component {
                     data-target="#blogCarousel"
                     data-slide-to={1}
                   />
-                </ol>
+                </ol> */}
                 {/* Carousel items */}
                 <div className="carousel-inner">
                   <div className="carousel-item active">
                     <div className="row">
                       <div className="col-md-3">
-                        <a href="#">
-                          <img
-                            src="https://i1.sndcdn.com/artworks-000224726346-id9j8i-t500x500.jpg"
+                        <a href="#"> <div className="boxImg">
+                          <img className="imgDiscover"
+                            src={this.props.imgLink1}
                             alt="Image"
                             style={{ maxWidth: "100%" }}
                           />
-                          <span>Folk &amp; Singer-Songwriter</span>
+                        </div><span className="titleImg">{this.props.imgName1}</span>
                         </a>
                       </div>
                       <div className="col-md-3">
-                        <a href="#">
-                          <img
-                            src="https://i1.sndcdn.com/artworks-000224726346-id9j8i-t500x500.jpg"
+                        <a href="#"> <div className="boxImg">
+                          <img className="imgDiscover"
+                            src={this.props.imgLink2}
                             alt="Image"
                             style={{ maxWidth: "100%" }}
                           />
-                          <span>Folk &amp; Singer-Songwriter</span>
+                        </div><span className="titleImg">{this.props.imgName2}</span>
                         </a>
                       </div>
                       <div className="col-md-3">
-                        <a href="#">
-                          <img
-                            src="https://i1.sndcdn.com/artworks-000224726346-id9j8i-t500x500.jpg"
+                        <a href="#"> <div className="boxImg">
+                          <img className="imgDiscover"
+                            src={this.props.imgLink3}
                             alt="Image"
                             style={{ maxWidth: "100%" }}
                           />
-                          <span>Folk &amp; Singer-Songwriter</span>
+                        </div><span className="titleImg">{this.props.imgName3}</span>
                         </a>
                       </div>
                       <div className="col-md-3">
-                        <a href="#">
-                          <img
-                            src="https://i1.sndcdn.com/artworks-000224726346-id9j8i-t500x500.jpg"
+                        <a href="#"> <div className="boxImg">
+                          <img className="imgDiscover"
+                            src={this.props.imgLink4}
                             alt="Image"
                             style={{ maxWidth: "100%" }}
                           />
-                          <span>Folk &amp; Singer-Songwriter</span>
+                        </div><span className="titleImg">{this.props.imgName4}</span>
                         </a>
                       </div>
                     </div>
                     {/*.row*/}
                   </div>
                   {/*.item*/}
-                  <div className="carousel-item">
-                    <div className="row">
-                      <div className="col-md-3">
-                        <a href="#">
-                          <img
-                            src="https://i1.sndcdn.com/artworks-000224726346-id9j8i-t500x500.jpg"
-                            alt="Image"
-                            style={{ maxWidth: "100%" }}
-                          />
-                          <span>Folk &amp; Singer-Songwriter</span>
-                        </a>
-                      </div>
-                      <div className="col-md-3">
-                        <a href="#">
-                          <img
-                            src="https://i1.sndcdn.com/artworks-000224726346-id9j8i-t500x500.jpg"
-                            alt="Image"
-                            style={{ maxWidth: "100%" }}
-                          />
-                          <span>Folk &amp; Singer-Songwriter</span>
-                        </a>
-                      </div>
-                      <div className="col-md-3">
-                        <a href="#">
-                          <img
-                            src="https://i1.sndcdn.com/artworks-000224726346-id9j8i-t500x500.jpg"
-                            alt="Image"
-                            style={{ maxWidth: "100%" }}
-                          />
-                          <span>Folk &amp; Singer-Songwriter</span>
-                        </a>
-                      </div>
-                      <div className="col-md-3">
-                        <a href="#">
-                          <img
-                            src="https://i1.sndcdn.com/artworks-000224726346-id9j8i-t500x500.jpg"
-                            alt="Image"
-                            style={{ maxWidth: "100%" }}
-                          />
-                          <span>Folk &amp; Singer-Songwriter</span>
-                        </a>
-                      </div>
-                    </div>
-                    {/*.row*/}
-                  </div>
                   {/*.item*/}
                 </div>
                 {/*.carousel-inner*/}

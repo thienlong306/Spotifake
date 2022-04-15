@@ -13,7 +13,15 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Player from '../components/Player/Player';
 import InfoSong from '../components/InfoSong/InfoSong';
+import Trending from './Trending';
+import $ from "jquery"
 function App() {
+  $("body").click(function (e) {
+    if (!$(".infoSearhResult").is(e.target) && $(".infoSearhResult").has(e.target).length === 0&&!$(".searhInfoInput").is(e.target) && $(".searhInfoInput").has(e.target).length === 0)
+    {
+      $(".infoSearhResult").removeClass("active");
+    }
+  });
   return (
     <div className="App">
     <div id="main">
@@ -23,6 +31,10 @@ function App() {
             <Switch>
               <Route exact path="/">
                 <Home></Home>
+                <Sidebar></Sidebar>
+              </Route>
+              <Route exact path="/trending">
+                <Trending></Trending>
                 <Sidebar></Sidebar>
               </Route>
               <Route path="/discover">

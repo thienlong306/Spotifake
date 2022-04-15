@@ -17,14 +17,22 @@ class Player extends Component {
     $(".range")[0].max = duration;
     $(".range")[0].value = currentTime;
     if (currentTime === duration) {
-      this.selectPlaySong(this.props.player.indexSongPlaying + 1);
+      this.selectPlaySong(this.props.player.indexSongPlaying + 1-this.props.song.song[0].id,
+        this.props.song.song[0].id);
     }
   }
   formatTimer(number) {
     const minutes = Math.floor(number / 60);
     const seconds = Math.floor(number - minutes * 60);
-    if (seconds < 10) return `${minutes}:0${seconds}`;
-    else return `${minutes}:${seconds}`;
+  
+    if (seconds < 10) {
+      if(!isNaN(minutes))
+        return `${minutes}:0${seconds}`;
+    }
+    else {
+      if(!isNaN(minutes))
+        return `${minutes}:${seconds}`
+    };
   }
   setIsPlaying = () => {
     if (this.props.player.isPlaying) {
@@ -112,7 +120,7 @@ class Player extends Component {
                 className="fas fa-fast-backward play-backward main-icon"
                 onClick={() => {
                   this.selectPlaySong(
-                    this.props.player.indexSongPlaying - 1,
+                    this.props.player.indexSongPlaying - 1-this.props.song.song[0].id,
                     this.props.song.song[0].id
                   );
                 }}
@@ -132,7 +140,7 @@ class Player extends Component {
                 className="fas fa-fast-forward play-forward main-icon"
                 onClick={() => {
                   this.selectPlaySong(
-                    this.props.player.indexSongPlaying + 1,
+                    this.props.player.indexSongPlaying + 1-this.props.song.song[0].id,
                     this.props.song.song[0].id
                   );
                 }}

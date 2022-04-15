@@ -51,18 +51,17 @@ a{
     align-items: center;
     overflow: hidden;
     min-height:100vh;
-    height: 100%;
 }
 #container{
-    height: 100%;
-    width: 100%;
-    /* margin:6% 0; */
+    width: 110rem;
+    height: 65rem;
     background-color: #e7e8f3;
-    /* border-radius: 2rem; */
+    border-radius: 2rem;
     display: flex;
-    /* box-shadow: 0 0 .8rem black; */
+    box-shadow: 0 0 .8rem black;
     position: relative;
 }
+
 .App {
     height: 100%;
 }

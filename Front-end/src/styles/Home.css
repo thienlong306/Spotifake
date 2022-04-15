@@ -37,7 +37,7 @@
     align-items: center;
     padding: 1rem 1.6rem;
     background-color: #fff;
-    border-radius: 2.5rem;
+    border-radius: 5px;
 }
 
 .search-btn {
@@ -153,21 +153,22 @@
 
 }
 
-.playlist-list {
-    height: 80%;
-    overflow-x: auto;
+.box_list {
+    height: 35%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.playlist-list::-webkit-scrollbar {
+.box_list::-webkit-scrollbar {
     width: 1px;
 }
 
-.playlist-list::-webkit-scrollbar-track {
+.box_list::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     border-radius: 10px;
 }
 
-.playlist-list::-webkit-scrollbar-thumb {
+.box_list::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
   }
@@ -192,19 +193,21 @@
 }
 
 .playlist {
+    width: 96%;
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    width: 90%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1rem 0;
     margin-left: 1rem;
     height: 12%;
+    overflow-x: hidden;
 }
 
 .playlist-list__title {
     height: 5%;
     font-size: 1rem;
+    overflow: hidden;
 }
 
 .playlist__number {
@@ -226,10 +229,10 @@
 .playlist__time {
     flex: 1;
     text-align: right;
-    padding-right: 2rem;
+    padding-right: 5px;
 }
 
-.playlist--hover:hover {
+.playlist--hover:hover  {
     position: relative;
     z-index: 1;
     background-color: #fff;
@@ -255,13 +258,13 @@
 ======================================*/
 .play-song {
     position: absolute;
-    height: 10%;
+    height: 11%;
     width: 46%;
     background-color: #fff;
     padding: 0 1.5rem 1.5rem;
     border-radius: 0.5rem;
     left: 27%;
-    bottom: 3%;
+    bottom: 2%;
 }
 
 .play-control {
@@ -375,6 +378,112 @@
     right: 1.125em;
     z-index: 4;
 }
-.input, .select select, .textarea {
-    border-radius: 2.5rem;
+/*=====================================================================
+                    DARK THEME
+=====================================================================*/
+
+#container.dark-theme, #container.dark-theme #main-content, #container.dark-theme #sidebar{
+    background: var(--second-color);
+    color:#ccc;
+}
+#container.dark-theme .artist-info__name{
+    color: #ccc;
+}
+#container.dark-theme .sidebar__shortcuts-item,
+#container.dark-theme .suggest-album{
+    color:#ccc;
+    background: var(--third-color);
+}
+#container.dark-theme .sidebar__favorite-title,
+#container.dark-theme .sidebar__shortcuts-title,
+#container.dark-theme .suggest-album h4,
+#container.dark-theme .main-content__trend-title,
+#container.dark-theme .playlist-head h4,
+#container.dark-theme .logo span{
+    color:#fff;
+}
+
+#container.dark-theme #navbar{
+    background: var(--third-color);
+}
+#container.dark-theme .navbar-content__icon a{
+    color:#ccc
+}
+#container.dark-theme .user-name,
+#container.dark-theme .navbar-user__container i{
+    color:#fff;
+}
+#container.dark-theme .play-song{
+    background: var(--third-color);
+}
+#container.dark-theme .play-song i{
+    color: #ccc;
+}
+#container.dark-theme .play-control__volume .volume::-webkit-slider-thumb{
+    background-color: #000;
+    border:.2rem solid #fff;
+
+}
+#container.dark-theme .range::-webkit-slider-thumb {
+    background: #000;
+    border-color:#fff;
+}
+
+
+#container.dark-theme .navbar-content__icon:hover{
+    background: var(--second-color);
+}
+#container.dark-theme .playlist--hover:hover{
+    background: var(--third-color) !important;
+}
+#container.dark-theme .playlist--hover.active{
+    background: var(--third-color);
+}
+#container.dark-theme #navbar header i:hover {
+    color:#ccc;
+}
+#container.dark-theme .check{
+    background: #fff;
+}
+#container.dark-theme .ball{
+    background-color: #000;
+}
+.searhInfoInput {
+    width: 82%;
+}
+.infoSearhResult {
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    width: 38%;
+    margin-top: 3px;
+    /* border-top: 2px solid; */
+    border-radius: 2px;
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+}
+.infoSearhResult.active {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+}
+li.liInfoSearh {
+    display: flex;
+    padding-left: 5px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    border-radius: 2px;
+    align-items: center;
+}
+li.liInfoSearh:hover {
+    background-color: #363636;
+    color: white;
+}
+.imgSearch {
+    width: 10%;
+}
+.infoSongSearch {
+    padding-left: 10px;
 }
