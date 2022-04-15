@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import $ from "jquery";
 class Search extends Component {
+    
   isChange = (e) => {
     if (e.target.value != "") {
       $(".infoSearhResult").addClass("active");
@@ -17,14 +18,20 @@ class Search extends Component {
       $(".infoSearhResult").removeClass("active");
     }
   };
+  backPage=()=>{
+      window.history.back();
+  }
+  forwardPage=()=>{
+      window.history.forward();
+  }
   render() {
     return (
       <div>
         <header>
           <nav className="main-content__header-nav">
             <i className="fas fa-bars bars-left"></i>
-            <i className="fas fa-arrow-left"></i>
-            <i className="fas fa-arrow-right"></i>
+            <i className="fas fa-arrow-left" onClick={()=>{this.backPage()}}></i>
+            <i className="fas fa-arrow-right"  onClick={()=>{this.forwardPage()}}></i>
           </nav>
           <div className="searhInfoInput">
             <div className="main-content__search-form">
