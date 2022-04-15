@@ -18,12 +18,12 @@ class ShowListTrending extends Component {
         <div>
           <div className="main-content__trend pt-2 pb-0">
             <div className="h2 pl-1">Trending</div>
-            <div className="main-content__trend-more btn-hover">
-              {/* More
+            {/* <div className="main-content__trend-more btn-hover">
+              More
               <span>
                 <i className="fas fa-chevron-right" />
-              </span> */}
-            </div>
+              </span>
+            </div> */}
           </div>
         </div>
         <div className="my-playlist">

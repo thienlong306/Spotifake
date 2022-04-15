@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import '../styles/App.css'
+import '../styles/Reponsive.css'
 import Home from './Home';
 import Discover from './Discover'
 import Sidebar from './Sidebar';

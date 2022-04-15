@@ -24,12 +24,24 @@ class Search extends Component {
   forwardPage=()=>{
       window.history.forward();
   }
+  clickBarLeft=()=>{
+    $("#navbar").addClass('active');
+    if ($("#sidebar").hasClass('active')) {
+        $("#sidebar").removeClass('active');
+    }
+  }
+  clickBarRight=()=>{
+    $("#sidebar").addClass('active');
+    if ($("#navbar").hasClass('active')) {
+        $("#navbar").removeClass('active');
+    }
+  }
   render() {
     return (
       <div>
         <header>
           <nav className="main-content__header-nav">
-            <i className="fas fa-bars bars-left"></i>
+            <i className="fas fa-bars bars-left" onClick={()=>{this.clickBarLeft()}}></i>
             <i className="fas fa-arrow-left" onClick={()=>{this.backPage()}}></i>
             <i className="fas fa-arrow-right"  onClick={()=>{this.forwardPage()}}></i>
           </nav>
@@ -103,6 +115,7 @@ class Search extends Component {
               </ul>
             </div>
           </div>
+          <i className="fas fa-bars bars-right" onClick={()=>{this.clickBarRight()}}></i>
         </header>
       </div>
     );

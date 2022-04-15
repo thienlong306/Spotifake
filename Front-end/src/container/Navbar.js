@@ -14,7 +14,9 @@ class Navbar extends Component {
         $(".ball").css("left", "22px");
     }
   }
-
+  clickHideNavBar=()=>{
+    $("#navbar").removeClass("active"); 
+  }
   render() {
     return (
       <div id="navbar">
@@ -28,7 +30,7 @@ class Navbar extends Component {
             >
               <span className="ball"></span>
             </span>
-            <i className="fas fa-stream js-hide-navbar"></i>
+            <i className="fas fa-stream js-hide-navbar" onClick={()=>{this.clickHideNavBar()}}></i>
           </header>
           <div className="logo">
             <i className="navbar__logo fab fa-forumbee" />

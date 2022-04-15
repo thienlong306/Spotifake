@@ -3,13 +3,17 @@ import InfoSong from "../components/InfoSong/InfoSong";
 import { connect } from "react-redux";
 import '../styles/Sidebar.css'
 import Player from "../components/Player/Player";
+import $ from "jquery"
 class Sidebar extends Component {
+  clickHideSideBar=()=>{
+    $("#sidebar").removeClass("active"); 
+  }
   render() {
     return (
       <div id="sidebar">
         <div className="sidebar__shortcuts">
         <p className="sidebar__shortcuts-title">Shortcuts
-          <i className="fas fa-stream js-hide-sidebar" />
+          <i className="fas fa-stream js-hide-sidebar" onClick={()=>{this.clickHideSideBar()}} />
         </p>
         <div className="sidebar__shortcuts-items">
           <span className="sidebar__shortcuts-item">Chill
@@ -32,7 +36,6 @@ class Sidebar extends Component {
         <div className="sidebar__shortcuts">
           <p className="sidebar__shortcuts-title">
             Trending Artists
-            <i className="fas fa-stream js-hide-sidebar"></i>
           </p>
           <div className="sidebar__favorite-list">
             <div className="artist-info__avt">

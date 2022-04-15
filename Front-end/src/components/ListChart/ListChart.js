@@ -32,7 +32,7 @@ class ListChart extends Component {
                 <div className="carousel-inner">
                   <div className="carousel-item active">
                     <div className="row">
-                      <div className="col-md-3">
+                      <div className="col-3">
                         <a href="#"> <div className="boxImg">
                           <img className="imgDiscover"
                             src={this.props.imgLink1}
@@ -42,7 +42,7 @@ class ListChart extends Component {
                         </div><span className="titleImg">{this.props.imgName1}</span>
                         </a>
                       </div>
-                      <div className="col-md-3">
+                      <div className="col-3">
                         <a href="#"> <div className="boxImg">
                           <img className="imgDiscover"
                             src={this.props.imgLink2}
@@ -52,7 +52,7 @@ class ListChart extends Component {
                         </div><span className="titleImg">{this.props.imgName2}</span>
                         </a>
                       </div>
-                      <div className="col-md-3">
+                      <div className="col-3">
                         <a href="#"> <div className="boxImg">
                           <img className="imgDiscover"
                             src={this.props.imgLink3}
@@ -62,7 +62,7 @@ class ListChart extends Component {
                         </div><span className="titleImg">{this.props.imgName3}</span>
                         </a>
                       </div>
-                      <div className="col-md-3">
+                      <div className="col-3">
                         <a href="#"> <div className="boxImg">
                           <img className="imgDiscover"
                             src={this.props.imgLink4}
