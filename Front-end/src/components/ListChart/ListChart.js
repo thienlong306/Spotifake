@@ -5,7 +5,7 @@ class ListChart extends Component {
     return (
       <div className="item_discover">
         <div className="dicover_title">
-          <h1 className="titleChart">{this.props.title}</h1>
+          <div className="titleChart h3">{this.props.title}</div>
           <span className="descriptionChart">{this.props.description}</span>
         </div>
         <div className="container pl-0 pt-2">

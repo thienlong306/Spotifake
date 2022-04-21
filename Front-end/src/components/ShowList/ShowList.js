@@ -1,46 +1,65 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Search from "../Search/Search";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 class ShowList extends Component {
-  componentDidMount(){
-    if(this.props.song.playlist==null){
-      this.props.changeListTrending("POP"); 
-    }else
-      this.props.changeListTrending(this.props.song.playlist); 
-    
+  componentDidMount() {
+    if (this.props.song.playlist == null) {
+      this.props.changeListTrending("POP");
+    } else this.props.changeListTrending(this.props.song.playlist);
   }
-  isChange=(event)=>{
+  isChange = (event) => {
     this.props.changeListTrending(event.target.value);
-  }
+  };
   render() {
     return (
       <div id="main-content">
         <Search></Search>
         <div>
-        <p className="main-content__des">What's hot<span><img src={require("../../images/fire.png")} alt="" width="16px" height="17px" /></span></p>
-        <div className="main-content__trend">
-          <div className="main-content__trend-title">Trending</div>
-          <div className="main-content__trend-more btn-hover">
-            More
-            <span><i className="fas fa-chevron-right" /></span>
+          <p className="main-content__des">
+            What's hot
+            <span>
+              <img
+                src={require("../../images/fire.png")}
+                alt=""
+                width="16px"
+                height="17px"
+              />
+            </span>
+          </p>
+          <div className="main-content__trend">
+            <div className="main-content__trend-title">Trending</div>
+            <Link to="/trending">
+              <div className="main-content__trend-more btn-hover">
+                More
+                <span>
+                  <i className="fas fa-chevron-right" />
+                </span>
+              </div>
+            </Link>
+          </div>
+          <div className="main-content__banner">
+            <p className="main-content__banner-artist">Artist</p>
+            <h4 className="main-content__banner-des">On Top Of The World</h4>
+            <div className="main-content__banner-btn">
+              <button className="play-btn">PLAY</button>
+              <button className="follow-btn">FOLLOW</button>
+            </div>
+            <span className="main-content__view">
+              Monthly listeners
+              <p>50.000</p>
+            </span>
           </div>
         </div>
-        <div className="main-content__banner">
-          <p className="main-content__banner-artist">Artist</p>
-          <h4 className="main-content__banner-des">On Top Of The World</h4>
-          <div className="main-content__banner-btn">
-            <button className="play-btn">PLAY</button>
-            <button className="follow-btn">FOLLOW</button>
-          </div>
-          <span className="main-content__view">Monthly listeners
-            <p>50.000</p>
-          </span>
-        </div>
-      </div>
         <div className="my-playlist">
           <div className="playlist-head">
             <h4>
-              <div className="select is-medium" onChange={(event)=>{this.isChange(event)}}>
+              <div
+                className="select is-medium"
+                onChange={(event) => {
+                  this.isChange(event);
+                }}
+              >
                 <select defaultValue={this.props.song.playlist}>
                   <option value={"POP"}>Popular Song</option>
                   <option value={"K-POP"}>Popular Korean songs</option>
@@ -66,16 +85,16 @@ class ShowList extends Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     song: state.song,
-  }
-}
+  };
+};
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     changeListTrending: (playlist) => {
       dispatch({
-        type:"CHANGE-LIST-TRENDING",
+        type: "CHANGE-LIST-TRENDING",
         playlist,
       });
     },
   };
-}
-export default connect(mapStateToProps,mapDispatchToProps)(ShowList)
+};
+export default connect(mapStateToProps, mapDispatchToProps)(ShowList);

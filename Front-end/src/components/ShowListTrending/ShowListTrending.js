@@ -13,7 +13,6 @@ class ShowListTrending extends Component {
   render() {
     return (
       <div id="main-content">
-
         <Search></Search>
         <div>
           <div className="main-content__trend pt-2 pb-0">

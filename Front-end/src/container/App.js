@@ -16,6 +16,10 @@ import Player from '../components/Player/Player';
 import InfoSong from '../components/InfoSong/InfoSong';
 import Trending from './Trending';
 import $ from "jquery"
+import News from './News';
+import Event from './Event';
+import Realese from './Realese';
+
 function App() {
   $("body").click(function (e) {
     if (!$(".infoSearhResult").is(e.target) && $(".infoSearhResult").has(e.target).length === 0&&!$(".searhInfoInput").is(e.target) && $(".searhInfoInput").has(e.target).length === 0)
@@ -40,6 +44,18 @@ function App() {
               </Route>
               <Route path="/discover">
                 <Discover></Discover>
+                <Sidebar></Sidebar>
+              </Route>
+              <Route path="/news">
+                <News></News>
+                <Sidebar></Sidebar>
+              </Route>
+              <Route path="/event">
+                <Event></Event>
+                <Sidebar></Sidebar>
+              </Route>
+              <Route path="/realese">
+                <Realese></Realese>
                 <Sidebar></Sidebar>
               </Route>
               <Route path="/signin">

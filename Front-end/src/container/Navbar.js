@@ -10,13 +10,13 @@ class Navbar extends Component {
       $(".ball").css("left", "2px");
     } else {
       // blackThemeCanvas.classList.add('dark-theme');
-        $("#container").toggleClass("dark-theme");
-        $(".ball").css("left", "22px");
+      $("#container").toggleClass("dark-theme");
+      $(".ball").css("left", "22px");
     }
-  }
-  clickHideNavBar=()=>{
-    $("#navbar").removeClass("active"); 
-  }
+  };
+  clickHideNavBar = () => {
+    $("#navbar").removeClass("active");
+  };
   render() {
     return (
       <div id="navbar">
@@ -30,7 +30,12 @@ class Navbar extends Component {
             >
               <span className="ball"></span>
             </span>
-            <i className="fas fa-stream js-hide-navbar" onClick={()=>{this.clickHideNavBar()}}></i>
+            <i
+              className="fas fa-stream js-hide-navbar"
+              onClick={() => {
+                this.clickHideNavBar();
+              }}
+            ></i>
           </header>
           <div className="logo">
             <i className="navbar__logo fab fa-forumbee" />
@@ -62,22 +67,22 @@ class Navbar extends Component {
               <p className=" navbar-content__title">Feed</p>
               <ul>
                 <li className="navbar-content__icon">
-                  <a href="">
+                  <Link to="/news">
                     <i className="far fa-newspaper" />
                     New and Notable
-                  </a>
+                  </Link>
                 </li>
                 <li className="navbar-content__icon">
-                  <a href="">
+                  <Link to="/realese">
                     <i className="fas fa-calendar-alt" />
                     Realese Calendar
-                  </a>
+                  </Link>
                 </li>
                 <li className="navbar-content__icon">
-                  <a href="">
+                  <Link to="/event">
                     <i className="fas fa-ticket-alt" />
                     Events
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -117,7 +122,7 @@ class Navbar extends Component {
             </a>
           </div>
         </div>
-        
+
         {/* <div className="navbar-user">
                         <div className="navbar-user__container row">
                             <div className="col-6 d-flex justify-content-center">

@@ -12,7 +12,7 @@ class Discover extends Component {
         <Search></Search>
         <div className="my-playlist">
           <div className="playlist-head">
-            <h4>Discover Tracks and Playlists</h4>
+            <div className="h1">Discover Tracks and Playlists</div>
             {/* <a class="btn-hover">Show all</a> */}
           </div>
           <div className="list_discover">

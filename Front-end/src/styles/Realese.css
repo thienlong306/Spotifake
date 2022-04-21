@@ -1,0 +1,127 @@
+.page-archive {
+  height: 73%;
+}
+.release-dates-end {
+  padding: 1rem;
+}
+.release-dates-end .outer-ad-hatch {
+  min-height: 250px !important;
+}
+@media (min-width: 992px) {
+  .article-body .outerAdHatch,
+  .wire .outerAdHatch {
+    margin: 22px 0;
+  }
+  .wire .outerAdHatch::after,
+  .wire .outerAdHatch::before {
+    width: 80%;
+  }
+  .release-dates-end {
+    padding: 0;
+  }
+}
+.release-dates .date-picker {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: black;
+  margin: 0 0 15px;
+  text-align: center;
+  height: 10%;
+  border-radius: 0.6rem;
+}
+.release-dates .date-picker li {
+  display: inline-block;
+  margin: 0 auto;
+  width: 49%;
+  position: relative;
+}
+.release-dates .date-picker li.dropdown {
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 15px 0px 25px;
+  text-align: left;
+}
+.iconRealese {
+  color: #fff;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  left: 10px;
+  top: 16px;
+  font-size: 20px;
+}
+.release-dates .date-picker li.dropdown select {
+  -webkit-appearance: none;
+  background: transparent 0 0;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  border: 0;
+  font-size: 16px;
+  height: 32px;
+  color: #fff;
+  margin-left: -25px;
+  padding-left: 35px;
+  /* width: 100%; */
+  font-weight: 700;
+}
+.release-dates .date-picker li.dropdown select option {
+  background: rgba(0, 0, 0, 0.8);
+}
+.release-dates .date-picker li.dropdown select:focus {
+  outline: 0;
+}
+.release-dates .date-picker li:first-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.listRealese {
+  overflow: hidden;
+  height: 80%;
+}
+.release-dates .release-feed {
+  border-left: 2px solid #4a4a4a;
+  margin-left: 60px;
+  padding: 15px 30px 100px 30px;
+  position: relative;
+  min-height: 100%;
+}
+.release-dates .release-feed .date {
+    color: #4a4a4a;
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    left: -49px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    padding-top: 5px;
+}
+.release-dates .release-feed .date::after {
+  box-shadow: 0 0 5px #ffdeeb;
+  border-radius: 50%;
+  background: #4a4a4a;
+  content: "";
+  display: block;
+  height: 12px;
+  left: 41px;
+  position: absolute;
+  top: 6px;
+  width: 12px;
+}
+.release-dates .release-feed .album a {
+  text-decoration: none;
+  color: #4a4a4a;
+  display: block;
+  font-weight: 700;
+  padding-top: 2px;
+  font-size: 12px;
+}
+.release-dates .release-feed .album a em {
+  display: block;
+  font-weight: 400;
+}
+.selectDate::-webkit-scrollbar{
+    width: 0px;
+}
