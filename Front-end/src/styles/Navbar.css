@@ -51,7 +51,7 @@
     transition: .25s linear;
     cursor: pointer;
 }
-.navbar-content__icon:hover a{
+.navbar-content__icon:hover{
     color:#fff;
 }
 .navbar-content__icon:after {

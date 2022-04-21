@@ -88,6 +88,10 @@
   position: relative;
   min-height: 100%;
 }
+.dark-theme .release-dates .release-feed {
+  border-left: 2px solid white;
+}
+
 .release-dates .release-feed .date {
     color: #4a4a4a;
     font-family: Oswald, Arial, Helvetica, sans-serif;
@@ -98,6 +102,9 @@
     text-transform: uppercase;
     padding-top: 5px;
 }
+.dark-theme .release-dates .release-feed .date {
+    color: white
+}
 .release-dates .release-feed .date::after {
   box-shadow: 0 0 5px #ffdeeb;
   border-radius: 50%;
@@ -105,10 +112,13 @@
   content: "";
   display: block;
   height: 12px;
-  left: 41px;
+  left: 42px;
   position: absolute;
   top: 6px;
   width: 12px;
+}
+.dark-theme .release-dates .release-feed .date::after {
+    background-color: white;
 }
 .release-dates .release-feed .album a {
   text-decoration: none;
@@ -117,6 +127,9 @@
   font-weight: 700;
   padding-top: 2px;
   font-size: 12px;
+}
+.dark-theme .release-dates .release-feed .album a {
+    color: white;
 }
 .release-dates .release-feed .album a em {
   display: block;

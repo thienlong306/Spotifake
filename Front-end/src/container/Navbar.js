@@ -44,46 +44,46 @@ class Navbar extends Component {
           </div>
           <div className="navbar-content">
             <nav>
-              <li className="navbar-content__icon">
-                <Link to="/">
+              <Link to="/">
+                <li className="navbar-content__icon">
                   <i className="fas fa-home" />
                   Home
-                </Link>
-              </li>
-              <li className="navbar-content__icon">
-                <Link to="/trending">
+                </li>
+              </Link>
+              <Link to="/trending">
+                <li className="navbar-content__icon">
                   <i className="fas fa-chart-line" />
                   Trending
-                </Link>
-              </li>
-              <li className="navbar-content__icon">
-                <Link to="/discover">
+                </li>
+              </Link>
+              <Link to="/discover">
+                <li className="navbar-content__icon">
                   <i className="fas fa-compass" />
                   Discover
-                </Link>
-              </li>
+                </li>
+              </Link>
             </nav>
             <nav>
               <p className=" navbar-content__title">Feed</p>
               <ul>
-                <li className="navbar-content__icon">
-                  <Link to="/news">
+                <Link to="/news">
+                  <li className="navbar-content__icon">
                     <i className="far fa-newspaper" />
                     New and Notable
-                  </Link>
-                </li>
-                <li className="navbar-content__icon">
-                  <Link to="/realese">
+                  </li>
+                </Link>
+                <Link to="/realese">
+                  <li className="navbar-content__icon">
                     <i className="fas fa-calendar-alt" />
                     Realese Calendar
-                  </Link>
-                </li>
-                <li className="navbar-content__icon">
-                  <Link to="/event">
+                  </li>
+                </Link>
+                <Link to="/event">
+                  <li className="navbar-content__icon">
                     <i className="fas fa-ticket-alt" />
                     Events
-                  </Link>
-                </li>
+                  </li>
+                </Link>
               </ul>
             </nav>
             <nav>
