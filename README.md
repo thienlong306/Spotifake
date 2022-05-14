@@ -3,7 +3,7 @@
 
 Spotifake is a digital music, podcast, and video service that gives you access to millions of songs and other content from creators all over the world.
 
-![Logo](https://cdn.discordapp.com/attachments/900622174530969640/974935724719747082/unknown.png)
+![Logo](https://cdn.discordapp.com/attachments/900622174530969640/974937072135700530/unknown.png)
 
 ## Installation
 
