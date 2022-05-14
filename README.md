@@ -1,9 +1,9 @@
 
-# Spotifake
+# SpotiFake
 
-App Streaming Music
+Spotifake is a digital music, podcast, and video service that gives you access to millions of songs and other content from creators all over the world.
 
-
+![Logo](https://cdn.discordapp.com/attachments/900622174530969640/974935724719747082/unknown.png)
 
 ## Installation
 
@@ -15,19 +15,7 @@ Install Spotifake with npm
   npm start
 ```
     
-## Containers
+## Screenshots
+![Home](https://cdn.discordapp.com/attachments/900622174530969640/974936444655251486/unknown.png)
 
-- Player
-- SongPage
-- HomePage
-- AlbumGenrePage
-- AlbumPlayList
-- ArtistPage
-- ArtistGenrePage
-
-## Components
-- Help me if you known
-## Documentation
-
-[Echo](https://github.com/anhthii/Echo)
-
+![Trending](https://cdn.discordapp.com/attachments/900622174530969640/974936638977376296/unknown.png)
