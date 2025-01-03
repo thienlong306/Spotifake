@@ -39,7 +39,7 @@ class Navbar extends Component {
           </header>
           <div className="logo">
             <i className="navbar__logo fab fa-forumbee" />
-            <span className="navbar__primary-text">Stream</span>
+            <span className="navbar__primary-text">Stream </span>
             <span>Music</span>
           </div>
           <div className="navbar-content">
